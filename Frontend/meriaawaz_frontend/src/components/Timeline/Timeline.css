@@ -1,0 +1,18 @@
+.timeline {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline__left {
+  display: flex;
+  justify-content: center;
+  flex: 0.7;
+}
+
+.timeline__right {
+  flex: 0.28;
+}
+
+.timeline__posts {
+}
