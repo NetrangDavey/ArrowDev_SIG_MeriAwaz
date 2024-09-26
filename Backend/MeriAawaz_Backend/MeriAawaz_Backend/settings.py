@@ -29,13 +29,13 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 REST_FRAMEWORK={
-    'DEFAULT_AUTHRNTICATION_CLASSES':{
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    },
-
-    'DEFAULT_PERMISSION_CLASSES':{
+     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        # Other authentication classes can go here, e.g., SessionAuthentication
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-    },
+    )
 }
 
 SIMPLE_JWT={
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'Api_MeriAawaz',
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -94,10 +95,13 @@ WSGI_APPLICATION = 'MeriAawaz_Backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': f"{BASE_DIR / 'credentials.cnf'}",
+        }
     }
 }
+AUTH_USER_MODEL = 'Api_MeriAawaz.CustomUser'
 
 
 # Password validation
@@ -118,6 +122,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        # Other authentication classes can go here
+    ),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -135,6 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
