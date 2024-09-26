@@ -1,4 +1,4 @@
-from .models import CustomUser  # Import your custom user model
+from .models import CustomUser,Problem  # Import your custom user model
 from rest_framework import serializers
 
 class UserSerializer(serializers.ModelSerializer):
@@ -18,3 +18,8 @@ class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField()
 
+class ProblemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Problem
+        fields = ['id', 'title', 'description', 'author', 'status', 'created_at', 'path']
+        extra_kwargs={"author":{'read_only':True}}

@@ -29,13 +29,13 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 REST_FRAMEWORK={
-    'DEFAULT_AUTHRNTICATION_CLASSES':{
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    },
-
-    'DEFAULT_PERMISSION_CLASSES':{
+     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        # Other authentication classes can go here, e.g., SessionAuthentication
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-    },
+    )
 }
 
 SIMPLE_JWT={
