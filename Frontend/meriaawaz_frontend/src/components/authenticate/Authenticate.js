@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import "./Authenticate.css";
+import logo from "../../assets/logoimg.jpg";
 import Login from "./Login";
 import Signup from "./Signup";
-import "./Authenticate.css";
 
 function Authenticate() {
   const [active, setActive] = useState("login");
@@ -12,10 +13,27 @@ function Authenticate() {
 
   return (
     <div className="authenticate">
-      {active === "login" ? <Login /> : <Signup />}
-      <button onClick={handleChange}>
-        {active === "login" ? "Sign Up" : "Log In"}
-      </button>
+      <div className="auth__left">
+        <img src={logo} alt="Instagram Screenshots" />
+      </div>
+      <div className="auth__right">
+        {active === "login" ? <Login /> : <Signup />}
+
+        <div className="auth__more">
+          <span>
+            {active === "login" ? (
+              <>
+                Don't have an account?{" "}
+                <button onClick={handleChange}>Sign Up</button>
+              </>
+            ) : (
+              <>
+                Have an account? <button onClick={handleChange}>Log in</button>
+              </>
+            )}
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

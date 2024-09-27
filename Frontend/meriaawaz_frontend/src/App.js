@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Problems_page from "./pages/Problems_page";
 import Authenticate from "./components/authenticate/Authenticate";
 import Navbar from "./components/Navbar/Navbar";
+import PostUpload from "./components/PostUpload/PostUpload";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,10 @@ function App() {
           <Route
             path="/problems_page"
             element={user ? <Problems_page /> : <Navigate to="/auth" replace />}
+          />
+          <Route
+            path="/report_p"
+            element={user ? <PostUpload /> : <Navigate to="/auth" replace />}
           />
           <Route
             path="/auth"

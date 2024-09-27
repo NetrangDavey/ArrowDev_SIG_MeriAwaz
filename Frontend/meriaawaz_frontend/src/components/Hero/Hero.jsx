@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logoimg.jpg";
 const Hero = () => {
   return (
@@ -17,8 +18,18 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex_btns">
-          <button className="Report_problem">Report problem</button>
-          <button className="Report_problem">Problems </button>
+          <Link
+            to="/Report_p"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <button className="Report_problem">Report problem</button>
+          </Link>
+          <Link
+            to="/Problems_page"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <button className="Report_problem">Problems </button>
+          </Link>
         </div>
       </div>
       <div className="hero-right-side">

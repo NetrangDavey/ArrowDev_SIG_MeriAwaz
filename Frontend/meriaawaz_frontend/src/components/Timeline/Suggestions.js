@@ -13,11 +13,11 @@ function Suggestions() {
               <Avatar>R</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">raju patel</span>
+              <span className="relation">New to Meri Aawaz</span>
             </div>
           </div>
-          <button className="follow__button">Follow</button>
+          {/* <button className="follow__button">Follow</button> */}
         </div>
 
         <div className="suggestions__username">
@@ -27,10 +27,10 @@ function Suggestions() {
             </span>
             <div className="username__info">
               <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="relation">New to Meri Aawaz</span>
             </div>
           </div>
-          <button className="follow__button">Follow</button>
+          {/* <button className="follow__button">Follow</button> */}
         </div>
 
         <div className="suggestions__username">
@@ -39,24 +39,24 @@ function Suggestions() {
               <Avatar>R</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">ram</span>
+              <span className="relation">New to Meri Aawaz</span>
             </div>
           </div>
-          <button className="follow__button">Follow</button>
+          {/* <button className="follow__button">Follow</button> */}
         </div>
 
         <div className="suggestions__username">
           <div className="username__left">
             <span className="avatar">
-              <Avatar>R</Avatar>
+              <Avatar>N</Avatar>
             </span>
             <div className="username__info">
-              <span className="username">redian_</span>
-              <span className="relation">New to Instagram</span>
+              <span className="username">netu</span>
+              <span className="relation">New to Meri Aawaz</span>
             </div>
           </div>
-          <button className="follow__button">Follow</button>
+          {/* <button className="follow__button">Follow</button> */}
         </div>
       </div>
     </div>

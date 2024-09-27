@@ -8,8 +8,7 @@ function Problem_dispaly() {
     <div className="homepage">
       <div className="homepage__navWraper"></div>
       <div className="homepage__timeline">
-        <PostUpload />
-        <PostDisplay />
+        {/* <PostDisplay /> */}
         <Timeline />
       </div>
     </div>

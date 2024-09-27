@@ -17,7 +17,7 @@ function Navbar() {
       <nav>
         <div className="wrapper">
           <div className="logo">
-            <a href="#">Logo</a>
+            <a href="#">Meri Aawaz</a>
           </div>
           <input type="radio" name="slider" id="menu-btn" />
           <input type="radio" name="slider" id="close-btn" />
@@ -39,7 +39,21 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <button onClick={handleLogout}>Logout</button>
+              <Link
+                to="/report_p"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Report Problems
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Problems_page"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {/* Problems */}
+                <button onClick={handleLogout}>Logout</button>
+              </Link>
             </li>
           </ul>
           <label htmlFor="menu-btn" className="btn menu-btn">
